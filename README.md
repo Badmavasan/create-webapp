@@ -218,3 +218,29 @@ Ces endpoints nécessitent une réflexion et une logique supplémentaire de votr
 ---
 
 > 💡 **Conseil :** Commencez par mettre en place la base de données et les modèles, puis implémentez les endpoints CRUD avant d'attaquer la logique métier.
+
+---
+
+## Développement Frontend (Bonus / Extension)
+
+En complément du backend, vous devez développer les pages frontend suivantes :
+
+### Pages à implémenter
+
+#### 1. Créer un film
+- Formulaire permettant de saisir les informations d'un film (titre, genre, année de sortie, description).
+- Soumission du formulaire via un appel à l'endpoint `POST /movies`.
+
+#### 2. Donner un rating et une review pour un film
+- Interface permettant à un utilisateur de noter un film (score de 1 à 5) et de rédiger une critique.
+- Appels aux endpoints `POST /ratings` et `POST /reviews`.
+
+#### 3. Consulter l'ensemble des films
+- Page listant tous les films disponibles avec leurs informations principales (titre, genre, année, note moyenne).
+- Chaque film est cliquable pour accéder à sa page de détail.
+
+#### 4. Page de détail d'un film
+Lorsqu'un utilisateur clique sur un film, il accède à une page de détail affichant :
+- Les informations complètes du film.
+- La liste des reviews associées à ce film.
+- La **répartition des sentiments** des reviews issue de votre modèle d'analyse : proportion de reviews **positives**, **neutres** et **négatives**, présentée sous forme visuelle (ex : graphique en barres ou camembert).
